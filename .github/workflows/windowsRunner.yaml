@@ -21,7 +21,7 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.8.2
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
-      - name: Run Maven Project
-        run: java -cp target/classes org.example.Main
+      - name: Compile class
+        run: javac Main.java
+      - name: Run class
+        run: java Main
