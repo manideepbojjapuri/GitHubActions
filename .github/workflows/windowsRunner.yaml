@@ -5,3 +5,5 @@ on:
   pull_request:
     branches:
       - develop-script
+jobs:
+  runs-on: windows-latest
