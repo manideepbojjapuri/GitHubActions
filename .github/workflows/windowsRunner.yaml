@@ -7,4 +7,12 @@ on:
       - develop-script
 jobs:
   job_one:
-    runs-on: 'windows-latest'
+    runs-on: windows-latest
+    Steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 19
+        uses: actions/setup-java@v3
+        with:
+          java-version: '19.0.1'
+          distribution: 'temurin'
+          cache: maven
