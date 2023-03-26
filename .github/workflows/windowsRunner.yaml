@@ -6,5 +6,5 @@ on:
     branches:
       - develop-script
 jobs:
-  check-bats-version:
+  job_one:
     runs-on: 'windows-latest'
