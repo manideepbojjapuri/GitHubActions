@@ -2,7 +2,7 @@ name: Windows-Runner
 on:
   schedule:
     - cron: '* * * * *'
-  pull_request:
+  push:
     branches:
       - develop-script
 jobs:
