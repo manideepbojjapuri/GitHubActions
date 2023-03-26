@@ -1,0 +1,27 @@
+name: Windows-Runner
+on:
+  schedule:
+    - cron: '* * * * *'
+  push:
+    branches:
+      - develop-script
+jobs:
+  job_one:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 19
+        uses: actions/setup-java@v3
+        with:
+          java-version: '19.0.1'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.2
+      - name: Compile class
+        run: javac src/main/java/org/example/Main.java
+      - name: Run class
+        run: java src/main/java/org/example/Main.java
