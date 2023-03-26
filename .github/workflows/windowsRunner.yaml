@@ -1,0 +1,4 @@
+name: Windows-Runner
+on:
+  schedule:
+    - cron: * 5 * * *
