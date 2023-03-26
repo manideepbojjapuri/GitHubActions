@@ -22,6 +22,6 @@ jobs:
         with:
           maven-version: 3.8.2
       - name: Compile class
-        run: javac Main.java
+        run: javac src/main/java/org/example/Main.java
       - name: Run class
-        run: java Main
+        run: java src/main/java/org/example/Main.java
